@@ -43,7 +43,7 @@ function getStoredData()
     $$('#currentServer').html("http://" + storedData["host"] + ":" + storedData["port"]);
   }
   else {
-    myApp.alert('Please go to Settings and configure your FreeNAS server!');
+    myApp.alert('Please go to Settings and configure your FreeNAS server!', 'Configuration');
     $$('#currentServer').html("?");
   }
 }
@@ -97,7 +97,7 @@ $$(document).on('deviceready', function() {
 
 myApp.onPageInit('index', function (page) {
   console.log("index");
-  getStoredData();
+  //getStoredData();
 }).trigger();
 
 $$(document).on('pageAfterBack', function (e) {
